@@ -1,4 +1,4 @@
-from app import logger, GPIO
+from app import logger
 from flask import render_template
 from . import bp, Robot, GPIO, RIGHT_INFRARED, LEFT_INFRARED
 
