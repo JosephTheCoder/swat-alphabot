@@ -24,7 +24,7 @@ def create_app():
     CORS(app) # enable Cross-Origin Resource Sharing
     
     initialize_robot_control_api(app)
-    # initialize_video_stream_api(app)
+    initialize_video_stream_api(app)
     
     return app
 
