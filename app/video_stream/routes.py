@@ -4,7 +4,7 @@ from flask import flash, render_template, request, Response
 
 import cv2
 
-@bp.route('/') 
+@bp.route('/dashboard') 
 def index(): 
    """Video streaming .""" 
    return render_template('index.html') 
