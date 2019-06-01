@@ -22,3 +22,5 @@ def action(action):
    if action == "right":
       if right_IR_status == 1:
          Robot.right()
+
+   return 200
