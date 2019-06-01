@@ -1,5 +1,5 @@
 from flask import Blueprint
-from app import GPIO
+import RPi.GPIO as GPIO
 from AlphaBot import AlphaBot
 
 bp = Blueprint('robot_control', __name__)
