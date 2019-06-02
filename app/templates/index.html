@@ -58,19 +58,21 @@
     </div>
     
     <div class="controls">
-        <div class="top-button">
-            <input id="up" type="image" name="action" value="forward" src="../static/up.png">
-        </div>
+        <form id="myform" method="post" action="/move/">
+          <div class="top-button">
+              <input id="up" type="image" name="action" value="forward" src="../static/up.png">
+          </div>
 
-        <div class="left-right-buttons">
-          <img id="left" src="../static/left.png">
-        
-          <img id="right" src="../static/right.png">
-        </div>
+          <div class="left-right-buttons">
+            <img id="left" src="../static/left.png">
+          
+            <img id="right" src="../static/right.png">
+          </div>
 
-        <div class="backward-btn">
-          <img id="back" src="../static/down.png">
-        </div>
+          <div class="backward-btn">
+            <img id="back" src="../static/down.png">
+          </div>
+        </form>
     </div>
     
   </body>

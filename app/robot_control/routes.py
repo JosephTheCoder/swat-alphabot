@@ -3,7 +3,7 @@ from flask import render_template, Response
 from . import bp, Robot, GPIO, RIGHT_INFRARED, LEFT_INFRARED
 
 # The function below is executed when someone requests a URL with the pin number and action in it:
-@bp.route("/<action>")
+@bp.route("/move/<action>")
 def action(action):
    right_IR_status = GPIO.input(RIGHT_INFRARED)
    left_IR_status = GPIO.input(LEFT_INFRARED)
