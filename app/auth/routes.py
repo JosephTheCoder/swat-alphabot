@@ -15,7 +15,7 @@ def index():
 @bp.route('/login', methods=['POST'])
 def login():
     if current_user.is_authenticated:
-        return render_template('index.html')
+        return redirect(url_for('auth.index'))
 
     username = request.form['username']
     password = request.form['password']
@@ -27,13 +27,13 @@ def login():
         logger.error("Tried to login with invalid credentials!")
         return render_template('login.html', error="Invalid credentials!")
 
-    return render_template('index.html')
+    return redirect(url_for('auth.index'))
 
 
 @bp.route('/login', methods=['GET'])
 def get_login_form():
     if current_user.is_authenticated:
-        return redirect(url_for('video_stream.index'))
+        return redirect(url_for('auth.index'))
         
     return render_template('login.html')
 
