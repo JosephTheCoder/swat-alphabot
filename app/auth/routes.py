@@ -13,7 +13,7 @@ def index():
     return render_template('index.html')
 
 @bp.route('/login', methods=['POST'])
-def login_company():
+def login():
     if current_user.is_authenticated:
         return render_template('index.html')
 
