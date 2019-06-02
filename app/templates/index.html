@@ -60,17 +60,25 @@
     <div class="controls">
         <form id="myform" method="get" action="{{ url_for('robot_control.action') }}">
           <div class="top-button">
-              <input id="up" type="submit" name="action" value="forward" src="../static/up.png">
+              <button name="action" value="forward">
+                <img id="up" src="../static/up.png" alt="forward">
+              </button>
           </div>
 
           <div class="left-right-buttons">
-            <input id="left" type="submit" name="action" value="left" src="../static/left.png">
+            <button name="action" value="left">
+              <img id="left" src="../static/left.png" alt="left">
+            </button>
 
-            <input id="right" type="submit" name="action" value="right" src="../static/right.png">
+            <button name="action" value="right">
+              <img id="right" src="../static/right.png" alt="right">
+            </button>
           </div>
 
           <div class="backward-btn">
-            <input id="back" type="submit" name="action" value="backward" src="../static/down.png">
+            <button name="action" value="backward">
+              <img id="down" src="../static/down.png" alt="backward">
+            </button>
           </div>
         </form>
     </div>
