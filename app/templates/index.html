@@ -1,9 +1,137 @@
-<html> 
- <head> 
-   <title>Video Streaming </title> 
- </head> 
- <body> 
-   <h1> Live Video Streaming </h1> 
-   <img src="{{ url_for('video_feed') }}"> 
- </body> 
-</html> 
+<html>
+  <head>
+    <title>Alphabot</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <style>
+        .dashboard-title {
+            font-size: 25pt;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            color: rgb(37, 115, 167);
+            border: 1px solid rgb(115, 188, 248); 
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 80px;  
+            margin-top: 20px;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+
+        .authors {
+          position: absolute;
+          font-size: 15px;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 600;
+          left: 20px;
+          top: 20px;
+        }
+
+        .tecnico-logo {
+          position: absolute;
+          width: 150px;
+          right: 30px;
+          top: 25px;
+        }
+
+        .video {
+          margin-left: 5%;
+          float: left;
+          width: 500px;
+        }
+        
+        .controls {
+          float: right;
+          margin-right: 10%;
+          margin-top: 50px;
+          width: 300px;
+          height: 300px;
+          margin-bottom: 50px;
+        }
+        
+        .top-button {
+          text-align: center;
+          height: 100px;
+        }
+
+        .left-right-buttons {
+          height: 100px;
+        }
+        
+        #left {
+          float: left;
+        }
+        
+        #right {
+          float:right
+        }
+        
+        .button {
+          background-color: rgb(255, 255, 255);
+          border: none;
+        }
+        
+        .backward-btn {
+          text-align: center;
+        }
+
+        .footer {
+          position: fixed;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 15px;
+          bottom: 3;
+          margin-left: 3px;
+          padding: 6px;
+          width: 98%;
+          height: 50px;
+          border: 1px solid rgb(115, 188, 248); 
+        }
+    </style>
+  </head>
+  <body>
+    <img class="tecnico-logo" src="http://web.tecnico.ulisboa.pt/~ist425322/wordpress/wp-content/uploads/2015/10/IST_A_RGB_POS.jpg">
+
+    <div class="authors">
+      <p>José Correia - ist181570</p>
+      <p>Pedro Fareleira - ist79074</p>
+    </div>
+
+    <div class="dashboard-title">Alphabot Control Dashboard</div>
+
+    <div class="video">
+      <img src="{{ url_for('video_stream.video_feed') }}" width="100%">
+    </div>
+    
+    <div class="controls">
+        <form id="myform" method="get" action="{{ url_for('robot_control.action') }}">
+          <div class="top-button">
+              <button id="up" class="button" name="action" value="forward">
+                <img src="../static/up.png" alt="forward">
+              </button>
+          </div>
+
+          <div class="left-right-buttons">
+            <button id="left" class="button" name="action" value="left">
+              <img src="../static/left.png" alt="left">
+            </button>
+
+            <button id="right" class="button" name="action" value="right">
+              <img src="../static/right.png" alt="right">
+            </button>
+          </div>
+
+          <div class="backward-btn">
+            <button id="down" class="button" name="action" value="backward">
+              <img src="../static/down.png" alt="backward">
+            </button>
+          </div>
+        </form>
+    </div>
+
+    <div class="footer">
+      Instituto Superior Técnico - Wireless Mobile Networks
+      <p>Active Reconnaissance in Indoor SWAT operations</p>
+
+    </div>
+    
+  </body>
+</html>
