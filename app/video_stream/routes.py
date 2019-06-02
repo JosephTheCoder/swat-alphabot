@@ -57,12 +57,6 @@ class Camera(object):
         cls.thread = None
 
 
-@bp.route('/')
-@login_required
-def index():
-    """Video streaming home page."""
-    return render_template('index.html')
-
 def gen(camera):
     """Video streaming generator function."""
     while True:

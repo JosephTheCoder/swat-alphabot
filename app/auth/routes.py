@@ -5,6 +5,12 @@ import json
 import os
 from flask_login import current_user, login_user, logout_user
 
+@bp.route('/')
+def index():
+    if not current_user.is_authenticated():
+        return redirect(url_for('auth.login'))
+
+    return render_template('index.html')
 
 @bp.route('/login', methods=['POST'])
 def login_company():
