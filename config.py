@@ -11,6 +11,9 @@ class Config(object):
     APP_ENV = os.environ.get('APP_ENV', 'development')
 
     SECRET_KEY = os.environ.get('SECRET_KEY')
+
+    ADMIN_USER = os.environ.get('ADMIN_USER')
+    ADMIN_PASS = os.environ.get('ADMIN_PASS')
     
     DEBUG = True
     TESTING = False
