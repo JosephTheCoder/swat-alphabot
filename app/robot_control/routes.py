@@ -1,5 +1,5 @@
 from app import logger
-from flask import render_template, Response, request.
+from flask import render_template, Response, request
 from . import bp, Robot, GPIO, RIGHT_INFRARED, LEFT_INFRARED
 
 # The function below is executed when someone requests a URL with the pin number and action in it:
