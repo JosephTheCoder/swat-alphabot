@@ -29,7 +29,7 @@ def login():
     username = request.form['username']
     password = request.form['password']
 
-    if username != config['ADMIN_USER'] or password != config['ADMIN_PASS']:
+    if username != os.environ['ADMIN_USER'] or password != os.environ['ADMIN_PASS']:
         logger.error("Tried to login with invalid credentials!")
         return render_template('login.html', error="Invalid credentials!")
 
