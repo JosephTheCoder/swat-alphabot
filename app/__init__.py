@@ -8,7 +8,7 @@ from flask_login import LoginManager
 
 def initialize_auth_api_blueprint(app):
     from app.auth import bp as auth_bp
-    app.register_blueprint(auth_bp, url_prefix='/auth')
+    app.register_blueprint(auth_bp)
 
 def initialize_robot_control_api(app):
     from app.robot_control import bp as robot_control_bp
