@@ -58,7 +58,7 @@
     </div>
     
     <div class="controls">
-        <form id="myform" method="post" action="/move/">
+        <form id="myform" method="post" action="{{ url_for('robot_control.action') }}">
           <div class="top-button">
               <input id="up" type="image" name="action" value="forward" src="../static/up.png">
           </div>
