@@ -4,11 +4,29 @@
     <link rel="stylesheet" href='../static/style.css'/>
   </head>
   <body>
-    <h1>Alphabot Live Streaming</h1>
-    <h3><img src="{{ url_for('video_stream.video_feed') }}" width="40%"></h3>
-    <hr>
+    <div class="dashboard-title">Alphabot Live Streaming</div>
+
+    <div class="video">
+      <img src="{{ url_for('video_stream.video_feed') }}" width="40%">
+    </div>
     
-    // DIRECTION BUTTONS
+    <div class="controls">
+        <div class="forward-btn">
+          <img src="../static/up.eps">
+        </div>
+
+        <div class="left-btn">
+          <img src="../static/left.eps">
+        </div>
+
+        <div class="right-btn">
+          <img src="../static/right.eps">
+        </div>
+
+        <div class="backward-btn">
+          <img src="../static/down.eps">
+        </div>
+    </div>
     
   </body>
 </html>
