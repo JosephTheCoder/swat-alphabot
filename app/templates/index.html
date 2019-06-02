@@ -60,24 +60,24 @@
     <div class="controls">
         <form id="myform" method="get" action="{{ url_for('robot_control.action') }}">
           <div class="top-button">
-              <button name="action" value="forward">
-                <img id="up" src="../static/up.png" alt="forward">
+              <button id="up" name="action" value="forward">
+                <img src="../static/up.png" alt="forward">
               </button>
           </div>
 
           <div class="left-right-buttons">
-            <button name="action" value="left">
-              <img id="left" src="../static/left.png" alt="left">
+            <button id="left" name="action" value="left">
+              <img src="../static/left.png" alt="left">
             </button>
 
-            <button name="action" value="right">
-              <img id="right" src="../static/right.png" alt="right">
+            <button id="right" name="action" value="right">
+              <img src="../static/right.png" alt="right">
             </button>
           </div>
 
           <div class="backward-btn">
-            <button name="action" value="backward">
-              <img id="down" src="../static/down.png" alt="backward">
+            <button id="down" name="action" value="backward">
+              <img src="../static/down.png" alt="backward">
             </button>
           </div>
         </form>
