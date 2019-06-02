@@ -15,7 +15,7 @@ def index():
 @bp.route('/login', methods=['POST'])
 def login_company():
     if current_user.is_authenticated:
-        return redirect(url_for('video_stream.index'))
+        return render_template('index.html')
 
     username = request.form['username']
     password = request.form['password']
