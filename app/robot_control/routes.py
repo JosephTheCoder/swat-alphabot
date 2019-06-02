@@ -1,8 +1,10 @@
 from app import logger
 from flask import render_template, Response, request
 from . import bp, Robot, GPIO, RIGHT_INFRARED, LEFT_INFRARED
+from app.auth.wrappers import require_api_token
 
 # The function below is executed when someone requests a URL with the pin number and action in it:
+@require_api_token
 @bp.route("/move")
 def action():
    right_IR_status = GPIO.input(RIGHT_INFRARED)

@@ -1,7 +1,7 @@
 from app import logger
 from . import bp
 from flask import render_template, Response
-
+from auth.wrappers import require_api_token
 import time
 import io
 import threading
@@ -58,6 +58,7 @@ class Camera(object):
 
 
 @bp.route('/')
+@require_api_token
 def index():
     """Video streaming home page."""
     return render_template('index.html')
@@ -70,6 +71,7 @@ def gen(camera):
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
 @bp.route('/video_feed')
+@require_api_token
 def video_feed():
     """Video streaming route. Put this in the src attribute of an img tag."""
     return Response(gen(Camera()),
