@@ -6,6 +6,10 @@ import os
 from flask_login import LoginManager
 
 
+def initialize_auth_api_blueprint(app):
+    from app.auth import bp as auth_bp
+    app.register_blueprint(auth_bp, url_prefix='/auth')
+
 def initialize_robot_control_api(app):
     from app.robot_control import bp as robot_control_bp
     app.register_blueprint(robot_control_bp)
@@ -13,11 +17,6 @@ def initialize_robot_control_api(app):
 def initialize_video_stream_api(app):
     from app.video_stream import bp as video_stream_bp
     app.register_blueprint(video_stream_bp)
-
-    
-def initialize_auth_api_blueprint(app):
-    from app.auth import bp as auth_bp
-    app.register_blueprint(auth_bp, url_prefix='/auth')
 
 
 def create_app():
@@ -29,8 +28,6 @@ def create_app():
     login_manager = LoginManager()
     login_manager.init_app(app)
     login_manager.login_view = 'auth.login'
-
-    current_path = os.path.dirname(os.path.realpath(__file__))
 
     @login_manager.unauthorized_handler
     def unauthorized_handler():

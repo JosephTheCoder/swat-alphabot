@@ -1,7 +1,7 @@
 from app import logger
 from . import bp
 from flask import render_template, Response
-from auth.wrappers import require_api_token
+from app.auth.wrappers import require_api_token
 import time
 import io
 import threading

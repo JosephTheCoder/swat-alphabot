@@ -17,7 +17,7 @@ def login_company():
     sudo_user = 'admin'
     sudo_pass = 'rmsf2019'
 
-    if username==sudo_user and password==sudo_pass:
+    if username != sudo_user or password != sudo_pass:
         logger.error("Tried to login with invalid credentials!")
         return render_template('login.html', error="Invalid credentials!")
 
@@ -35,20 +35,3 @@ def get_login_form():
 def logout():
     logout_user()
     return redirect(url_for('video_stream.index'))
-
-# @bp.route('/company_registration', methods=['POST'])
-# def register_compamny():
-#     username = request.json.get('username')
-#     password = request.json.get('password')
-
-#     if username is None or password is None:
-#         abort(400) # missing arguments to auth
-#     if CompanyFinder.get_by_username(username) is not None:
-#         abort(400) # company already exists
-    
-#     company = Company(username=username)
-#     company.hash_password(password)
-#     db.session.add(company)
-#     db.session.commmit()
-
-#     return redirect('/')
