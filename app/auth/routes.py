@@ -27,6 +27,7 @@ def login():
         logger.error("Tried to login with invalid credentials!")
         return render_template('login.html', error="Invalid credentials!")
 
+    current_user.is_authenticated = True
     return redirect(url_for('auth.index'))
 
 
