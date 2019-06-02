@@ -4,6 +4,7 @@
     <style>
         .dashboard-title {
             font-size: 25pt;
+            font-family: 'Courier New', Courier, monospace;
             text-align: center;
             color: rgb(37, 115, 167);
             border: 1px solid rgb(115, 188, 248); 
@@ -13,6 +14,7 @@
         }
 
         .video {
+          margin-left: 20%;
           float: left;
           width: 500px;
         }
@@ -50,7 +52,7 @@
     <div class="dashboard-title">Alphabot Control Dashboard</div>
 
     <div class="video">
-      <img src="{{ url_for('video_stream.video_feed') }}">
+      <img src="{{ url_for('video_stream.video_feed') }}" width="100%">
     </div>
     
     <div class="controls">
