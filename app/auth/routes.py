@@ -5,7 +5,7 @@ import json
 import os
 from flask_login import current_user, login_user, logout_user
 
-@bp.route('/')
+@bp.route('/', methods=['GET', 'POST'])
 def index():
     if not current_user.is_authenticated:
         return render_template('login.html')
