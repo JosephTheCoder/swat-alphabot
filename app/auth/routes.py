@@ -27,7 +27,7 @@ def login_company():
         logger.error("Tried to login with invalid credentials!")
         return render_template('login.html', error="Invalid credentials!")
 
-    return redirect(url_for('video_stream.index'))
+    return render_template('index.html')
 
 
 @bp.route('/login', methods=['GET'])
@@ -40,4 +40,4 @@ def get_login_form():
 @bp.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('video_stream.index'))
+    return redirect(url_for('auth.index'))
