@@ -9,26 +9,34 @@
 
         .video {
           float: left;
+          width: 40%;
         }
         
         .controls {
           float: right;
+          margin-right: 20%;
+          width: 400px;
         }
         
-        .forward-btn {
-        
+        .top-button {
+          text-align: center;
+          height: 100px;
+        }
+
+        .left-right-buttons {
+          height: 100px;
         }
         
-        .left-btn {
-        
+        #left {
+          float: left;
         }
         
-        .right-btn {
-        
+        #right {
+          float:right
         }
         
         .backward-btn {
-        
+          text-align: center;
         }
     </style>
   </head>
@@ -36,24 +44,22 @@
     <div class="dashboard-title">Alphabot Control Dashboard</div>
 
     <div class="video">
-      <img src="{{ url_for('video_stream.video_feed') }}" width="40%">
+      <img src="{{ url_for('video_stream.video_feed') }}">
     </div>
     
     <div class="controls">
-        <div class="forward-btn">
-          <img src="../static/up.png">
+        <div class="top-button">
+          <img id="up" src="../static/up.png">
         </div>
 
-        <div class="left-btn">
-          <img src="../static/left.png">
-        </div>
-
-        <div class="right-btn">
-          <img src="../static/right.png">
+        <div class="left-right-buttons">
+          <img id="left" src="../static/left.png">
+        
+          <img id="right" src="../static/right.png">
         </div>
 
         <div class="backward-btn">
-          <img src="../static/down.png">
+          <img id="back" src="../static/down.png">
         </div>
     </div>
     
