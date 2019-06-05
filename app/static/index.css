@@ -73,6 +73,14 @@
     text-align: center;
 }
 
+.button-logout {
+    float: center;
+    border: 1px solid rgb(115, 188, 248); 
+    padding: 3px;
+    width: 200px;
+    height: 50px;
+}
+
 .footer {
     position: relative;
     overflow: hidden;
