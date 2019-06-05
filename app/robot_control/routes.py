@@ -14,23 +14,23 @@ def action():
    logger.info(action)
 
    if action == "forward":
-      if right_IR_status == 1 and left_IR_status == 1:
-         Robot.forward()
-         return Response(status=200) 
-   
+      #if right_IR_status == 1 and left_IR_status == 1:
+      Robot.forward()
+      return Response(status=200) 
+
    if action == "backward":
-         Robot.backward()
-         return Response(status=200) 
+      Robot.backward()
+      return Response(status=200) 
 
    if action == "left":
-      if left_IR_status == 1:
-         Robot.left()
-         return Response(status=200) 
+      #if left_IR_status == 1:
+      Robot.left()
+      return Response(status=200) 
 
    if action == "right":
-      if right_IR_status == 1:
-         Robot.right()
-         return Response(status=200) 
+      #if right_IR_status == 1:
+      Robot.right()
+      return Response(status=200) 
 
    if action == "stop":
          Robot.stop()
