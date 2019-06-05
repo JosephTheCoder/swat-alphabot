@@ -6,7 +6,7 @@ db = SQLAlchemy()
 db.UUID = UUID(as_uuid=True)
 
 def create_tables():
-    from app.models.user import User
+    from app.models.users import Users
     db.create_all()
 
 
