@@ -42,5 +42,4 @@ def get_login_form():
 @bp.route('/logout')
 def logout():
     logout_user()
-    session.pop('name')
     return redirect(url_for('auth.get_login_form'))
