@@ -6,7 +6,54 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/static/index.css">
+
+    <script>
+        function forward() {
+          const Http = new XMLHttpRequest();
+          const url='http://localhost:5000/move/forward';
+          Http.open("GET", url);
+          Http.send();
+
+          Http.onreadystatechange = (e) => {
+            console.log(Http.responseText)
+          }
+        }
+
+        function left() {
+          const Http = new XMLHttpRequest();
+          const url='http://localhost:5000/move/left';
+          Http.open("GET", url);
+          Http.send();
+
+          Http.onreadystatechange = (e) => {
+            console.log(Http.responseText)
+          }
+        }
+
+        function right() {
+          const Http = new XMLHttpRequest();
+          const url='http://localhost:5000/move/right';
+          Http.open("GET", url);
+          Http.send();
+
+          Http.onreadystatechange = (e) => {
+            console.log(Http.responseText)
+          }
+        }
+
+        function backward() {
+          const Http = new XMLHttpRequest();
+          const url='http://localhost:5000/move/backward';
+          Http.open("GET", url);
+          Http.send();
+
+          Http.onreadystatechange = (e) => {
+            console.log(Http.responseText)
+          }
+        }
+    </script>
   </head>
+
   <body>
     <img class="tecnico-logo" src="http://web.tecnico.ulisboa.pt/~ist425322/wordpress/wp-content/uploads/2015/10/IST_A_RGB_POS.jpg">
 
@@ -22,29 +69,27 @@
     </div>
     
     <div class="controls">
-        <form id="myform" method="get" action="{{ url_for('robot_control.action') }}">
-          <div class="top-button">
-              <button id="up" class="button" name="action" value="forward">
-                <img src="../static/up.png" alt="forward">
-              </button>
-          </div>
+        <div class="top-button">
+            <button id="up" class="button" onclick="forward()">
+              <img src="../static/up.png" alt="forward">
+            </button>
+        </div>
 
-          <div class="left-right-buttons">
-            <button id="left" class="button" name="action" value="left">
+        <div class="left-right-buttons">
+            <button id="left" class="button" onclick="left()">
               <img src="../static/left.png" alt="left">
             </button>
 
-            <button id="right" class="button" name="action" value="right">
+            <button id="right" class="button" onclick="right()">
               <img src="../static/right.png" alt="right">
             </button>
-          </div>
+        </div>
 
-          <div class="backward-btn">
-            <button id="down" class="button" name="action" value="backward">
+        <div class="backward-btn">
+            <button id="down" class="button" onclick="backward()">
               <img src="../static/down.png" alt="backward">
             </button>
-          </div>
-        </form>
+        </div>
     </div>
 
     <div class="footer">
