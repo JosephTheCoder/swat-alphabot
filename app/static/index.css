@@ -44,8 +44,7 @@
 }
 
 .button_img:active {
-    width: 120%;
-    height: 120%;
+    transform: scale(1.2);
 }
 
 .top-button {
