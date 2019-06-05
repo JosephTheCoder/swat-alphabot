@@ -45,5 +45,4 @@ def logout():
     if session.get('name'):
         # prevent flashing automatically logged out message
         del session['name']
-    flash('You have successfully logged yourself out.')
     return redirect(url_for('auth.get_login_form'))
