@@ -35,6 +35,7 @@ def login():
 @bp.route('/login', methods=['GET'])
 def get_login_form():
     if current_user.is_authenticated:
+        print('authenticated')
         return redirect(url_for('auth.index'))
         
     return render_template('login.html')
