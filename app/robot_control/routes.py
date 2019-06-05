@@ -31,4 +31,4 @@ def action():
    if action == "stop":
          Robot.stop()
 
-   return ('', 204)
+   return redirect(url_for('auth.index'))
