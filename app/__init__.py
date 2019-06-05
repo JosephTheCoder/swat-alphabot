@@ -39,8 +39,8 @@ def create_app():
     from app.models.users import Users
 
     @login_manager.user_loader
-    def load_user(username):
-        user = Users.query.filter_by(username=username).first()
+    def load_user(uuid):
+        user = Users.query.filter_by(uuid=uuid).first()
         if user is None:
             return None
         return user
