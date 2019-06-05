@@ -50,12 +50,12 @@
 
 .left-right-buttons {
     display: flex;
+    text-align: center;
 }
 
 .middle_button {
     flex: 33.33%;
-    padding: 5px;
-  }
+}
 
 .button {
     background-color: rgb(255, 255, 255);
