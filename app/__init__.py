@@ -56,8 +56,8 @@ def create_app():
     CORS(app) # enable Cross-Origin Resource Sharing
     
     initialize_auth_api_blueprint(app)
-    #initialize_robot_control_api(app)
-    #initialize_video_stream_api(app)
+    initialize_robot_control_api(app)
+    initialize_video_stream_api(app)
 
     @app.shell_context_processor
     def make_shell_context():
