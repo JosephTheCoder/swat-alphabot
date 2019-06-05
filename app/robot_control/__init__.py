@@ -20,11 +20,12 @@ class AlphaBot(object):
 		GPIO.setup(self.IN4,GPIO.OUT)
 		GPIO.setup(self.ENA,GPIO.OUT)
 		GPIO.setup(self.ENB,GPIO.OUT)
-		self.forward()
 		self.PWMA = GPIO.PWM(self.ENA,500)
 		self.PWMB = GPIO.PWM(self.ENB,500)
 		self.PWMA.start(50)
 		self.PWMB.start(50)
+
+		self.stop()
 
 	def forward(self):
 		GPIO.output(self.IN1,GPIO.HIGH)
@@ -90,7 +91,7 @@ LEFT_INFRARED = 19
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
-GPIO.setup(RIGHT_INFRARED,GPIO.IN,GPIO.PUD_UP)
-GPIO.setup(LEFT_INFRARED,GPIO.IN,GPIO.PUD_UP)
+GPIO.setup(RIGHT_INFRARED,GPIO.IN)
+GPIO.setup(LEFT_INFRARED,GPIO.IN)
 
 from app.robot_control import routes

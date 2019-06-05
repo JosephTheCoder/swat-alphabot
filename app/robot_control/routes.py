@@ -32,4 +32,8 @@ def action():
          Robot.right()
          return Response(status=200) 
 
+   if action == "stop":
+         Robot.stop()
+         return Response(status=200) 
+
    return Response(status=400) 

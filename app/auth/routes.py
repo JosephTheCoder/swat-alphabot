@@ -1,18 +1,49 @@
 from app import logger, config
-from flask import jsonify, Response, request, redirect, session, url_for, current_app, render_template
+from flask import request, redirect, session, url_for, render_template
 from . import bp
 import json
 import os
-from flask_login import login_manager, current_user, login_user, logout_user, UserMixin
+from flask_login import UserMixin, login_user, logout_user, current_user, LoginManager
+from appserver import app
+
+login_manager = LoginManager(app)
+login_manager.login_view = 'auth.login'
+
+@login_manager.unauthorized_handler
+def unauthorized_handler():
+    return 'Unauthorized'
+
+
+users = {os.environ['ADMIN_USER']: {'password': os.environ['ADMIN_PASS']}}
 
 class User(UserMixin):
+    pass
 
-    def __init__(self, username):
-        self.name = username
 
-    @property
-    def id(self):
-        return self.name
+@login_manager.user_loader
+def get_user(username):
+    if username not in users:
+        return None
+
+    user = User()
+    return 
+
+
+@login_manager.request_loader
+def request_loader(request):
+    username = request.form.get('username')
+    if username not in users:
+        return
+
+    user = User()
+    user.id = username
+
+    # DO NOT ever store passwords in plaintext and always compare password
+    # hashes using constant-time comparison!
+    user.is_authenticated = request.form['password'] == users[username]['password']
+
+    return user
+
 
 @bp.route('/')
 def index():
@@ -23,19 +54,17 @@ def index():
 
 @bp.route('/login', methods=['POST'])
 def login():
-    if current_user.is_authenticated:
-        return redirect(url_for('auth.index'))
-
     username = request.form['username']
     password = request.form['password']
 
-    if username != os.environ['ADMIN_USER'] or password != os.environ['ADMIN_PASS']:
-        logger.error("Tried to login with invalid credentials!")
-        return render_template('login.html', error="Invalid credentials!")
+    if password == users[username]['password']:
+        user = User()
+        user.id = username
+        login_user(user)
+        return redirect(url_for('auth.index'))
 
-    user = User('admin')
-    login_user(user)
-    return redirect(url_for('auth.index'))
+    logger.error("Tried to login with invalid credentials!")
+    return render_template('login.html', error="Invalid credentials!")
 
 
 @bp.route('/login', methods=['GET'])

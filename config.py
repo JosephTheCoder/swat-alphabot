@@ -15,16 +15,27 @@ class Config(object):
     ADMIN_USER = os.environ.get('ADMIN_USER')
     ADMIN_PASS = os.environ.get('ADMIN_PASS')
     
+    SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL'] + os.environ['APP_DB'] + "?client_encoding=utf8"
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
+
     DEBUG = True
     TESTING = False
 
 
 class DevelopmentConfig(Config):
     """Development configuration"""
+    APP_ENV = os.environ.get('APP_ENV', 'development')
     SECRET_KEY = os.environ.get('SECRET_KEY')
 
     DEBUG = True
     TESTING = True
+
+    ADMIN_USER = os.environ.get('ADMIN_USER')
+    ADMIN_PASS = os.environ.get('ADMIN_PASS')
+
+    SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL'] + os.environ['APP_DB'] + "?client_encoding=utf8"
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
+
  
 
 class TestingConfig(Config):
