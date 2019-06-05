@@ -49,23 +49,20 @@
 }
 
 .left-right-buttons {
-    height: 100px;
+    height: 150px;
     width: 400px;
 }
 
 #left {
-    float: left;
     width: 33%;
 }
 
 #right {
     width: 33%;
-    float: right
 }
 
 #stop {
     width: 33%;
-    float: center;
 }
 
 .button {
