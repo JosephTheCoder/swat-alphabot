@@ -4,7 +4,6 @@ from . import bp
 import json
 import os
 from flask_login import UserMixin, login_user, logout_user, current_user, LoginManager
-from appserver import app
 
 from app.auth.finders.user_finder import UserFinder
 
