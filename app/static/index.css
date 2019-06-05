@@ -54,15 +54,17 @@
 }
 
 #left {
-    width: 33%;
+    float: left;
+    margin-left: 100px;
 }
 
 #right {
-    width: 33%;
+
 }
 
 #stop {
-    width: 33%;
+    width: 68px;
+    margin-right: 100px;
 }
 
 .button {
