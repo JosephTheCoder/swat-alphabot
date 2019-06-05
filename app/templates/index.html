@@ -42,9 +42,19 @@
         }
 
         function backward() {
-          console.log("heeeeeey backwardx");
           const Http = new XMLHttpRequest();
           const url='http://192.168.0.106:5000/move/backward';
+          Http.open("GET", url);
+          Http.send();
+
+          Http.onreadystatechange = (e) => {
+            console.log(Http.responseText)
+          }
+        }
+
+        function stop() {
+          const Http = new XMLHttpRequest();
+          const url='http://192.168.0.106:5000/move/stop';
           Http.open("GET", url);
           Http.send();
 
@@ -79,6 +89,10 @@
         <div class="left-right-buttons">
             <button id="left" class="button" onclick="left()">
               <img src="../static/left.png" alt="left">
+            </button>
+
+            <button id="stop" class="button" onclick="stop()">
+                <img src="../static/stop.png" alt="stop">
             </button>
 
             <button id="right" class="button" onclick="right()">

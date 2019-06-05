@@ -57,7 +57,11 @@
 }
 
 #right {
-    float:right
+    float:right;
+}
+
+#stop {
+    float:center;
 }
 
 .button {
