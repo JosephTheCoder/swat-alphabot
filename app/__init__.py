@@ -36,11 +36,11 @@ def create_app():
     login_manager.init_app(app)
     login_manager.login_view = 'auth.login'
 
-    from .models import User
+    from app.models.users import Users
 
     @login_manager.user_loader
     def load_user(username):
-        user = User.query.filter_by(username=username).first()
+        user = Users.query.filter_by(username=username).first()
         if user is None:
             return None
         return user
@@ -61,7 +61,7 @@ def create_app():
 
     @app.shell_context_processor
     def make_shell_context():
-        return {'db': db, 'User': User}
+        return {'db': db, 'User': Users}
     
     return app
 

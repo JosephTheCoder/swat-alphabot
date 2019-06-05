@@ -6,8 +6,8 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 
 
-class User(ModelMixin, db.Model, UserMixin):
-    __tablename__ = 'user'
+class Users(ModelMixin, db.Model, UserMixin):
+    __tablename__ = 'users'
     
     username = db.Column(db.String(100))
     password_hash = db.Column(db.String(128))
