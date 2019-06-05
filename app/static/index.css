@@ -57,11 +57,11 @@
 }
 
 #right {
-    margin-left: 100px;
+    float: right
 }
 
 #stop {
-    margin-left: 100px;
+    float: center;
 }
 
 .button {
