@@ -1,5 +1,5 @@
 from app import logger
-from flask import render_template, Response, request, redirect, url_for
+from flask import render_template, Response, request, redirect, url_for, 
 from . import bp, Robot, GPIO, RIGHT_INFRARED, LEFT_INFRARED
 from flask_login import login_required
 
@@ -30,3 +30,5 @@ def action():
 
    if action == "stop":
          Robot.stop()
+
+   return 200
