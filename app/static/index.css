@@ -81,6 +81,14 @@
     height: 50px;
 }
 
+.logout-button {
+    position: relative;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    bottom: 3;
+}
+
 .footer {
     position: relative;
     overflow: hidden;
