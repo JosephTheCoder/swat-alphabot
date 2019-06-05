@@ -35,7 +35,6 @@ def login():
 @bp.route('/login', methods=['GET'])
 def get_login_form():
     if current_user.is_authenticated:
-        print('authenticated')
         return redirect(url_for('auth.index'))
         
     return render_template('login.html')
@@ -43,4 +42,8 @@ def get_login_form():
 @bp.route('/logout')
 def logout():
     logout_user()
+    if session.get('name'):
+        # prevent flashing automatically logged out message
+        del session['name']
+    flash('You have successfully logged yourself out.')
     return redirect(url_for('auth.get_login_form'))
