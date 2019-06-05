@@ -31,4 +31,4 @@ def action():
    if action == "stop":
          Robot.stop()
 
-   return 200
+   return ('', 204)
