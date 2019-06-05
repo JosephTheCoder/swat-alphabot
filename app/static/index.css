@@ -38,7 +38,7 @@
     float: right;
     margin-right: 10%;
     margin-top: 50px;
-    width: 400px;
+    width: 350px;
     height: 300px;
     margin-bottom: 50px;
 }
@@ -51,6 +51,7 @@
 .left-right-buttons {
     display: flex;
     text-align: center;
+    height: 100px;
 }
 
 .middle_button {
