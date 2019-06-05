@@ -58,12 +58,8 @@
     margin-left: 100px;
 }
 
-#right {
-
-}
-
 #stop {
-    width: 68px;
+    float: center;
     margin-right: 100px;
 }
 
