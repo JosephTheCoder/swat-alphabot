@@ -49,8 +49,7 @@
 }
 
 .left-right-buttons {
-    height: 150px;
-    width: 400px;
+    display: flex;
 }
 
 .middle_button {
