@@ -31,4 +31,4 @@ def action():
    if action == "stop":
          Robot.stop()
 
-   return redirect(url_for('auth.index'))
+   return render_template('index.html')
