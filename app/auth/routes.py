@@ -43,4 +43,4 @@ def get_login_form():
 def logout():
     logout_user()
     session.pop('name')
-    return redirect(url_for('auth.index'))
+    return redirect(url_for('auth.get_login_form'))
