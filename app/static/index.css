@@ -43,6 +43,11 @@
     margin-bottom: 50px;
 }
 
+.button_img:active {
+    width: 120%;
+    height: 120%;
+}
+
 .top-button {
     text-align: center;
     height: 100px;
@@ -126,14 +131,5 @@
     margin-top: 20px;
     height: 300px;
     margin-bottom: 30px;
-    }
-
-    .top-button {
-    text-align: center;
-    height: 60px;
-    }
-
-    .left-right-buttons {
-    height: 60px;
     }
 }
