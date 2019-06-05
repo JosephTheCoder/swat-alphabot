@@ -53,14 +53,12 @@
     width: 400px;
 }
 
-#left {
+.left {
     float: left;
-    margin-left: 100px;
 }
 
-#stop {
+.stop {
     float: center;
-    margin-right: 100px;
 }
 
 .button {
