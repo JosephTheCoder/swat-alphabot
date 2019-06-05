@@ -30,5 +30,3 @@ def action():
 
    if action == "stop":
          Robot.stop()
-
-   return render_template('index.html')
