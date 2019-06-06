@@ -27,6 +27,10 @@
     top: 25px;
 }
 
+.tecnico-logo-mobile {
+    display: none;
+}
+
 .video {
     margin-left: 5%;
     float: left;
@@ -120,7 +124,13 @@
     }
 
     .tecnico-logo {
+        display: none;
+    }
+
+    .tecnico-logo-mobile {
         width: 60px;
+        display: relative;
+        text-align: center;
     }
 
     .authors {
