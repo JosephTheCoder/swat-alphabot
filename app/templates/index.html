@@ -86,32 +86,34 @@
 
     <div class="dashboard-title">Alphabot Control Dashboard</div>
 
-    <div class="video">
-      <img src="{{ url_for('video_stream.video_feed') }}" width="100%">
-    </div>
-    
-    <div class="controls">
-        <div class="top-button">
-            <img class="button_img" src="../static/up.png" onclick="forward()">
-        </div>
-
-        <div class="left-right-buttons">
-          <div class="middle_button">
-            <img class="button_img" src="../static/left.png" onclick="left()">
+    <div>
+      <div class="video">
+        <img src="{{ url_for('video_stream.video_feed') }}" width="100%">
+      </div>
+      
+      <div class="controls">
+          <div class="top-button">
+              <img class="button_img" src="../static/up.png" onclick="forward()">
           </div>
 
-          <div class="middle_button">
-            <img class="button_img" src="../static/stop.png" onclick="stop()">
+          <div class="left-right-buttons">
+            <div class="middle_button">
+              <img class="button_img" src="../static/left.png" onclick="left()">
+            </div>
+
+            <div class="middle_button">
+              <img class="button_img" src="../static/stop.png" onclick="stop()">
+            </div>
+
+            <div class="middle_button">
+              <img class="button_img" src="../static/right.png" onclick="right()">
+            </div>
           </div>
 
-          <div class="middle_button">
-            <img class="button_img" src="../static/right.png" onclick="right()">
+          <div class="backward-btn">
+              <img class="button_img" src="../static/down.png" onclick="backward()">
           </div>
-        </div>
-
-        <div class="backward-btn">
-            <img class="button_img" src="../static/down.png" onclick="backward()">
-        </div>
+      </div>
     </div>
 
     <div class="logout-div">

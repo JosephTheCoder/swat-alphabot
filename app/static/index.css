@@ -6,7 +6,7 @@
     border: 1px solid rgb(115, 188, 248); 
     border-radius: 10px;
     padding: 20px;
-    margin-bottom: 80px;  
+    margin-bottom: 30px;  
     margin-top: 20px;
     margin-left: 20%;
     margin-right: 20%;
@@ -74,10 +74,10 @@
     position: relative;
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     bottom: 3;
     float: center;
-    border: 1px solid rgb(115, 188, 248); 
+    border: 2px solid rgb(115, 188, 248); 
     padding: 2px;
     border-radius: 10px;
     width: 100px;
@@ -95,7 +95,7 @@
     width: 98%;
     height: 40px;
     line-height: 10px;
-    border: 1px solid rgb(115, 188, 248); 
+    border: 2px solid rgb(115, 188, 248); 
 }
 
 @media only screen and (max-width: 1100px) {
