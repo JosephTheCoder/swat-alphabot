@@ -115,12 +115,12 @@
 
 @media only screen and (max-width: 800px) {
     .dashboard-title {
-        font-size: 18pt;
+        font-size: 16pt;
         padding: 10px;
         margin-bottom: 40px;  
         margin-top: 10px;
-        margin-left: 20%;
-        margin-right: 20%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
     .tecnico-logo {
@@ -136,9 +136,9 @@
     .authors {
         position: relative;
         font-size: 13px;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
         text-align: center;
+        line-height: 8px;
+        margin-bottom: 20px;
     }
 
     .video {
@@ -148,9 +148,9 @@
     }
 
     .controls {
-    margin-left: 200px;
-    margin-top: 20px;
-    height: 300px;
-    margin-bottom: 30px;
+        margin-left: 200px;
+        margin-top: 20px;
+        height: 300px;
+        margin-bottom: 30px;
     }
 }
