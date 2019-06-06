@@ -151,7 +151,7 @@
     .video {
         float: center;
         width: 350px;
-        margin-left: -40px;
+        margin-left: -45px;
     }
 
     .dashboard {
@@ -161,7 +161,7 @@
     .controls {
         float: center;
         margin-top: 30px;
-        margin-bottom: 10px;
+        margin-bottom: 0px;
     }
 
     #logout-button {
