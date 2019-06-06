@@ -39,7 +39,7 @@ def get_login_form():
         
     return render_template('login.html')
 
-@bp.route('/logout')
+@bp.route('/logout', methods=['GET'])
 def logout():
     logout_user()
     if session.get('name'):

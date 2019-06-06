@@ -1,7 +1,7 @@
 .section-header {
     position: relative;
     padding-bottom: 10px;
-    padding-top: 80px;
+    padding-top: 60px;
     margin-bottom: 30px;
   }
   
@@ -43,11 +43,11 @@
   .login-card {
     text-align: center;
     background-color: #98bfff;
-    margin-left: 20vw;
-    margin-right: 20vw;
+    margin-left: 25vw;
+    margin-right: 25vw;
     border-radius: 30px;
-    padding-top: 20px;
-    padding-bottom: 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   .username-container {
@@ -115,6 +115,13 @@
   
 /* On screens that are 700px wide*/
 @media only screen and (max-width: 750px) {
+  .section-header {
+    position: relative;
+    padding-bottom: 10px;
+    padding-top: 40px;
+    margin-bottom: 40px;
+  }
+
   .username-input {
     width: 80%;
     height: 50px;
@@ -136,6 +143,7 @@
     font-size: 20px;
     text-align: center;
   }
+  
 
   .login-card {
     text-align: center;
@@ -143,9 +151,15 @@
     margin-left: 5vw;
     margin-right: 5vw;
     border-radius: 30px;
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom: 50px;
   }
+
+  .login-button-container {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
 
   .section-header p {
     -webkit-font-smoothing: antialiased;
