@@ -151,11 +151,11 @@
     .video {
         float: center;
         width: 350px;
-        margin-left: -100px;
+        margin-left: -96px;
     }
 
     .dashboard {
-        padding-left: 100px;
+        padding-left: 50px;
     }
 
     .controls {
