@@ -65,7 +65,7 @@
 
         function logout() {
           const Http = new XMLHttpRequest();
-          const url='http://172.20.10.3:5000//logout';
+          const url='http://172.20.10.3:5000/logout';
           Http.open("GET", url);
           Http.send();
 
@@ -115,7 +115,7 @@
     </div>
 
     <div class="logout-div">
-        <button id="logout-button" class="button-logout" onclick="logout()">
+        <button id="logout-button" onclick="logout()">
           Logout
         </button>
     </div>
