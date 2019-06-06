@@ -121,9 +121,21 @@
         margin-right: 20%;
     }
 
+    .tecnico-logo {
+        width: 60px;
+    }
+
+    .authors {
+        position: relative;
+        font-size: 13px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        text-align: center;
+    }
+
     .video {
     float: center;
-    width: 500px;
+    width: 100%;
     }
 
     .controls {

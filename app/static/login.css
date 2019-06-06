@@ -1,7 +1,7 @@
 .section-header {
     position: relative;
     padding-bottom: 10px;
-    padding-top: 100px;
+    padding-top: 80px;
     margin-bottom: 30px;
   }
   
@@ -46,7 +46,7 @@
     margin-left: 20vw;
     margin-right: 20vw;
     border-radius: 30px;
-    padding-top: 30px;
+    padding-top: 20px;
     padding-bottom: 50px;
   }
 
@@ -87,7 +87,7 @@
   }
 
   .login-button-container {
-    margin-top: 80px;
+    margin-top: 50px;
     text-align: center;
   }
   
@@ -110,7 +110,7 @@
   .error {
     font-size: 23px;
     font-family: 'Lato';
-    color: white;
+    color: rgb(206, 25, 25);
   }
   
 /* On screens that are 700px wide*/
