@@ -31,6 +31,10 @@
     display: none;
 }
 
+.dashboard {
+    width: 100%;
+}
+
 .video {
     margin-left: 5%;
     float: left;
