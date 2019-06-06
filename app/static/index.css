@@ -28,7 +28,7 @@
 }
 
 .video {
-    margin-left: 15%;
+    margin-left: 5%;
     float: left;
     width: 600px;
 }
@@ -94,6 +94,7 @@
     padding: 6px;
     width: 98%;
     height: 50px;
+    line-height: 10px;
     border: 1px solid rgb(115, 188, 248); 
 }
 
