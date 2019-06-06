@@ -152,12 +152,26 @@
     margin-right: 5vw;
     border-radius: 30px;
     padding-top: 30px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
   }
 
   .login-button-container {
     margin-top: 30px;
     text-align: center;
+  }
+
+  .login-button {
+    background-color: #ffffff;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    width: 100px;
+    border: none;
+    border: 2px solid rgb(55, 121, 184);
+    outline: none;
+    outline-style: none;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
   }
   
 
