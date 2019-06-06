@@ -70,7 +70,7 @@
     text-align: center;
 }
 
-.logout-button {
+#logout-button {
     position: relative;
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
@@ -93,7 +93,7 @@
     margin-left: 3px;
     padding: 6px;
     width: 98%;
-    height: 50px;
+    height: 40px;
     line-height: 10px;
     border: 1px solid rgb(115, 188, 248); 
 }
@@ -132,8 +132,9 @@
     }
 
     .video {
-    float: center;
-    width: 100%;
+        float: center;
+        width: 350px;
+        margin-left: 2%;
     }
 
     .controls {
