@@ -10,8 +10,8 @@ def forward():
    right_IR_status = GPIO.input(RIGHT_INFRARED)
    left_IR_status = GPIO.input(LEFT_INFRARED)
 
-   if right_IR_status == 1 and left_IR_status == 1:
-      Robot.forward()
+   #if right_IR_status == 1 and left_IR_status == 1:
+   Robot.forward()
 
    return ('', 204)
 
@@ -22,8 +22,8 @@ def left():
    right_IR_status = GPIO.input(RIGHT_INFRARED)
    left_IR_status = GPIO.input(LEFT_INFRARED)
 
-   if left_IR_status == 1:
-      Robot.left()
+   #if left_IR_status == 1:
+   Robot.left()
 
    return ('', 204)
 
@@ -34,8 +34,8 @@ def right():
    right_IR_status = GPIO.input(RIGHT_INFRARED)
    left_IR_status = GPIO.input(LEFT_INFRARED)
 
-   if right_IR_status == 1:
-      Robot.right()
+   #if right_IR_status == 1:
+   Robot.right()
    
    return ('', 204)
 
