@@ -5,11 +5,11 @@
     color: rgb(37, 115, 167);
     border: 1px solid rgb(115, 188, 248); 
     border-radius: 10px;
-    padding: 20px;
+    padding: 15px;
     margin-bottom: 30px;  
     margin-top: 20px;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 .authors {
@@ -84,8 +84,8 @@
     border: 2px solid rgb(115, 188, 248); 
     padding: 2px;
     border-radius: 10px;
-    width: 100px;
-    height: 30px;
+    width: 120px;
+    height: 40px;
 }
 
 .footer {
@@ -115,7 +115,7 @@
 
 @media only screen and (max-width: 800px) {
     .dashboard-title {
-        font-size: 16pt;
+        font-size: 15pt;
         padding: 10px;
         margin-bottom: 40px;  
         margin-top: 10px;
@@ -130,7 +130,6 @@
     .tecnico-logo-mobile {
         width: 60px;
         display: relative;
-        text-align: center;
     }
 
     .authors {
